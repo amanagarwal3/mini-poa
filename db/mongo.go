@@ -19,7 +19,7 @@ func Connect() {
 	defer cancel()
 
 	// clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
-	mongoURI := os.Getenv("MONGODB_URI")
+	mongoURI := os.Getenv("MONGO_URI")
 	clientOptions := options.Client().ApplyURI(mongoURI)
 	
 	client, err := mongo.Connect(ctx, clientOptions)
